@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class  name="cn.itcast.onetomany.Customer" table="customer">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<!-- 配置普通属性 -->
+		<property name="name" length="20"/>
+		<!-- 一对多的关系使用set集合映射 -->
+		<set name="orders" cascade="save-update,delete,delete-orphan">
+			<!-- 确定关联的外键列 -->
+			<key column="cid"/>
+			<!-- 映射到关联类属性 -->
+			<one-to-many class="cn.itcast.onetomany.Order"/>
+		</set>
+	</class>
+</hibernate-mapping>

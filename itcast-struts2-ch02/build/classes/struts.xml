@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- Struts2的Action必须放在指定的包空间下定义 -->
+	<package name="default" extends="struts-default">
+		<!-- 定义action,该action对应的类为cn.itcast.action.HelloWorldAction -->
+		<action name="login" class="cn.itcast.action.LoginAction">
+			<!-- 定义处理和视图资源之间的映射关系 -->
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="aware" class="cn.itcast.action.AwareAction">
+			<result name="success">/message.jsp</result>
+		</action>
+		<action name="message" class="cn.itcast.action.MessageAction">
+			<result name="success">/message.jsp</result>
+		</action>
+		
+		<action name="userlogin" class="cn.itcast.action.UserLoginAction">
+			<result name="success">/loginSuccess.jsp</result>
+			<result name="error">/loginError.jsp</result>
+		</action>
+	</package>
+</struts>

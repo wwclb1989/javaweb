@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	<bean id="中国人" class="iocexample2.Chinese">
+		<constructor-arg ref="英语"></constructor-arg>
+	</bean>
+	<bean id="英语" class="iocexample2.English"></bean>
+</beans>

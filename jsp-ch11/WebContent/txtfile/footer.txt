@@ -1,0 +1,4 @@
+﻿
+  <div id="footer">
+       <p align="center">版权所有《jsp编程技术》编写组，2008年7月</p>
+  </div>
