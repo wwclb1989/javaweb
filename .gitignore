@@ -30,4 +30,5 @@ HELP.md
 ### Eclipse ###
 .metadata
 **/build/
+**/bin/
 Servers
